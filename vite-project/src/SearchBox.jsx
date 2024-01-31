@@ -1,12 +1,11 @@
 
-const SearchBox = ({ value, onChange }) => {
+const SearchBox = ({ onSearch }) => {
+  const handleChange = (e) => {
+    onSearch(e.target.value);
+  };
+
   return (
-    <input
-      type="text"
-      placeholder="Search contacts..."
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-    />
+    <input type="text" placeholder="Search contacts..." onChange={handleChange} />
   );
 };
 

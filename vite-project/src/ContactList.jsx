@@ -1,10 +1,10 @@
-import Contact from './Contact'; 
+import ContactItem from './ContactItem';
 
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ul>
       {contacts.map((contact) => (
-        <Contact key={contact.id} {...contact} onDelete={() => onDeleteContact(contact.id)} />
+        <ContactItem key={contact.id} contact={contact} onDeleteContact={onDeleteContact} />
       ))}
     </ul>
   );
